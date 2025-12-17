@@ -16,8 +16,10 @@ from PyQt5.QtGui import QIcon, QFont
 import zipfile
 
 # Import utility modules
-import sys
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# Note: sys.path manipulation is for direct script execution
+# When installed as package, use proper imports instead
+if __name__ == "__main__" or not __package__:
+    sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from utils.zip_manager import ZIPManager
 from utils.compression import CompressionMethod, CompressionHandler

@@ -7,8 +7,10 @@ import sys
 import os
 from typing import Optional
 
-# Add parent directory to path
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# Add parent directory to path for direct script execution
+# When installed as package, use proper imports instead
+if __name__ == "__main__" or not __package__:
+    sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from utils.zip_manager import ZIPManager
 from utils.compression import CompressionMethod, CompressionHandler
