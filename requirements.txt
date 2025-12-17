@@ -1,0 +1,15 @@
+# ZIP Archive Manager - Requirements
+
+# Core dependencies
+PyQt5>=5.15.0
+
+# Python standard library modules used (no installation needed):
+# - zipfile: ZIP file handling
+# - os: Operating system interface
+# - sys: System-specific parameters
+# - pathlib: Object-oriented filesystem paths
+# - argparse: Command-line argument parsing
+# - hashlib: Secure hash and message digest
+# - secrets: Cryptographically strong random numbers
+# - time: Time-related functions
+# - typing: Type hints support
